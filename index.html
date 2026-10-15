@@ -52,8 +52,14 @@ ul.ri li::before{content:"";position:absolute;left:2px;top:.95em;width:8px;heigh
 .thread{background:linear-gradient(160deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:14px 0;box-shadow:0 0 24px #3b82f61f}
 .thread h3{margin:0 0 6px}
 .thread p{margin:0;color:var(--ink)}
-.pub{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid #1d3a8a66}
+.pub{display:grid;grid-template-columns:210px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid #1d3a8a66}
 .badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.8rem;font-weight:600;line-height:1.4}
+/* eye-catching publication status badges */
+.pub .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:14px;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;line-height:1.35}
+.pub .badge::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:currentColor;box-shadow:0 0 10px currentColor}
+.pub .b-pub{background:linear-gradient(135deg,#34e0a1,#0ea5e9);color:#03121f;border:0;box-shadow:0 0 20px #34e0a199}
+.pub .b-acc{background:linear-gradient(135deg,#7dd3fc,#3b82f6);color:#02102b;border:0;box-shadow:0 0 20px #3b82f6bb}
+.pub .b-rev{background:#f5b9421f;color:#ffd27a;border:1px solid #f5b942;box-shadow:0 0 16px #f5b94255}
 .b-acc{background:#3b82f633;color:#bfe0ff;border:1px solid var(--blue);box-shadow:0 0 12px #3b82f677}
 .b-pub{background:#60c8ff2b;color:#d7f2ff;border:1px solid var(--sky);box-shadow:0 0 12px #60c8ff77}
 .b-rev{background:#1d3a8a55;color:var(--mute);border:1px solid var(--line)}
@@ -61,8 +67,10 @@ ul.ri li::before{content:"";position:absolute;left:2px;top:.95em;width:8px;heigh
 .pub .a{color:var(--mute);font-size:.93rem;margin:0 0 6px}
 .pub .a b{color:var(--ink)}
 .pub .abs{font-size:.92rem;color:var(--ink);margin:8px 0;max-width:68ch}
-.card{background:linear-gradient(160deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:12px 0;max-width:640px}
-.wr{border-left:3px solid var(--blue);padding:4px 0 4px 20px;margin:22px 0;max-width:68ch}.wr h3{margin:8px 0 4px;font-size:1.15rem}.wr p{margin:0}.wr .src{display:flex;gap:12px;align-items:center;margin-bottom:2px}.wr time{color:var(--mute);font-size:.88rem}.soon{color:var(--mute);font-style:italic}
+.wr{border-left:3px solid var(--blue);padding:4px 0 4px 20px;margin:22px 0;max-width:68ch}.wr h3{margin:8px 0 4px;font-size:1.15rem}.wr p{margin:0}.wr .src{display:flex;gap:12px;align-items:center;margin-bottom:2px}.wr time{color:var(--mute);font-size:.88rem}
+.wr h3 a{color:var(--sky);text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#60c8ff88;text-underline-offset:5px}
+.wr h3 a::after{content:" \2197";font-size:.9em}
+.wr h3 a:hover{color:#fff;text-decoration-color:var(--glow)}
 footer{max-width:1000px;margin:40px auto 0;padding:24px 20px 40px;border-top:1px solid var(--line);color:var(--mute);font-size:.88rem}
 @media(max-width:760px){
   .about{grid-template-columns:1fr;gap:24px}
@@ -77,8 +85,8 @@ footer{max-width:1000px;margin:40px auto 0;padding:24px 20px 40px;border-top:1px
 <nav><div class="in">
   <a class="brand" href="#about">Farzana Zahid Manoshi</a>
   <div class="links">
-    <a href="#about">About me</a><a href="#research">Research</a><a href="#publications">Publications</a>
-    <a href="#code">Code</a><a href="#writing">Writing</a><a href="#contact">Contact</a>
+    <a href="#about">About me</a><a href="#publications">Publications</a><a href="#research">Research</a>
+    <a href="#writing">Writing</a><a href="#contact">Contact</a>
   </div>
 </div></nav>
 
@@ -92,16 +100,13 @@ footer{max-width:1000px;margin:40px auto 0;padding:24px 20px 40px;border-top:1px
   <div>
     <h1>Farzana Zahid Manoshi</h1>
     <p class="role">Researcher &amp; Writer · Natural Language Processing</p>
-    <p>I am a researcher in <span class="hl">natural language processing</span> devoted to making language technology <span class="hl">trustworthy, fair and inclusive</span>, with a focus on <span class="hl">low-resource languages</span>. My work asks three questions: can we trust what a model says it is doing, does every language and community get represented, and does AI in the classroom actually help students learn? I study <span class="hl">interpretable models</span>, <span class="hl">fairness in large language models</span> and <span class="hl">human-centered evaluation</span>.</p>
-    <p>I completed my BSc in Computer Science and Engineering at <span class="hl">Ahsanullah University of Science and Technology</span> in June 2026, and I now work as a <span class="hl">research assistant</span> at AUST with <a href="https://www.aust.edu/cse/faculty_member/mr_md_rakibul_islam">Md. Rakibul Islam</a>, alongside an internship in the <span class="hl">AML/CFT</span> team at <span class="hl">bKash</span>, Bangladesh's leading fintech company.</p>
-    <p>I am also a writer. My essays in <span class="hl">The Daily Observer</span> and <span class="hl">The New Nation</span>, two of Bangladesh's national English-language dailies, explore <span class="hl">introspection</span> and the inner life, and the impact of <span class="hl">AI on education</span> in Bangladesh. Both come from the same habit as research: close attention to meaning.</p>
+    <p>I am a researcher in <span class="hl">natural language processing</span>, happiest when a hard question about language refuses to give up its answer easily. I care about making language technology <span class="hl">trustworthy, fair and inclusive</span>, especially for <span class="hl">low-resource languages</span> that still sit at the edges of the field. Three questions keep pulling me back: can we trust what a model says it is doing? Does every language and community have a place in these systems? Does AI in the classroom truly help students learn? I chase them through <span class="hl">interpretable models</span>, <span class="hl">fairness in large language models</span> and <span class="hl">human-centered evaluation</span>.</p>
+    <p>I completed my BSc in Computer Science and Engineering at <span class="hl">Ahsanullah University of Science and Technology</span> in June 2026, and I am now a <span class="hl">research assistant</span> there with <a href="https://www.aust.edu/cse/faculty_member/mr_md_rakibul_islam">Md. Rakibul Islam</a>, studying why sentiment and sarcasm models falter when language shifts. Alongside the lab, I intern in the <span class="hl">AML/CFT</span> team at <span class="hl">bKash</span>, Bangladesh's leading fintech company.</p>
+    <p>Writing is the other half of how I think. My articles in <span class="hl">The Daily Observer</span> and <span class="hl">The New Nation</span> follow two threads: the quiet inner life, in thought, gratitude and the small things we overlook, and what AI is changing about how Bangladesh learns. For me, research and writing are one habit: paying close attention to meaning.</p>
     <div class="soc">
       <a class="btn" href="#publications">Publications</a>
-      <a class="btn" href="#contact">Email me</a>
-      <!-- TODO: add your links -->
-      <a class="btn" href="https://github.com/YOUR-USERNAME">GitHub</a>
-      <a class="btn" href="https://scholar.google.com/">Google Scholar</a>
-      <a class="btn" href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a>
+      <a class="btn" href="mailto:farzanazahid@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/farzana-zahid-b3b268227/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
 
     <h3>News</h3>
@@ -115,6 +120,52 @@ footer{max-width:1000px;margin:40px auto 0;padding:24px 20px 40px;border-top:1px
       <li><time>Jun 2026</time><span>Graduated with a BSc in CSE from <span class="hl">AUST</span>.</span></li>
     </ul>
   </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <h2>Publications</h2>
+
+  <article class="pub">
+    <div><span class="badge b-pub">Published · NLP4I @ EMNLP 2026</span></div>
+    <div>
+      <p class="t">A Quantitative Gap Audit of LLM-era NLP for Education: Validity, Deployment, and Multilingual Equity</p>
+      <p class="a"><b>Farzana Zahid Manoshi</b>, <!-- add co-authors --></p>
+      <p class="abs">An audit of 137 educational NLP papers (2022–2025) using three metrics: Validity Gap, Deployment Readiness Index and Multilingual Equity Index. 92.7% of studies never evaluate learning outcomes.</p>
+      <a class="btn" href="https://openreview.net/forum?id=utV9AZY77P" target="_blank" rel="noopener">Paper</a>
+      <a class="btn" href="papers/education-nlp-gap-audit.pdf" target="_blank" rel="noopener">PDF</a>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div><span class="badge b-acc">Accepted · WiNNLP @ EMNLP 2026</span></div>
+    <div>
+      <p class="t">Marker Signal Void: Linguistic Deception Fingerprinting and Transformer Benchmarking on a Domain-Stratified Bangla Rumour Corpus</p>
+      <p class="a"><b>Farzana Zahid Manoshi</b>, <!-- add co-authors --></p>
+      <p class="abs">We introduce MisInfo-11K, a seven-domain Bangla rumour corpus, 14 linguistic markers that expose domain-specific deception strategies, and the Marker Signal Void, a ceiling on what surface cues can detect. MuRIL reaches Macro-F1 0.98.</p>
+      <a class="btn" href="papers/marker-signal-void.pdf" target="_blank" rel="noopener">PDF</a>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div><span class="badge b-rev">Under review · COLING 2027</span></div>
+    <div>
+      <p class="t">Human-Supervised Concept Bottlenecks for Interpretable Bangla Text Classification</p>
+      <p class="a"><b>Farzana Zahid Manoshi</b>, <!-- add co-authors --></p>
+      <p class="abs">We collect 436,966 dense human instance–concept judgments for Bangla sarcasm and show that human-supervised concept bottleneck models beat similarity-supervised ones on all nine encoders. GPT-5.x models reach about 79% label accuracy yet agree only modestly with humans on concepts.</p>
+      <a class="btn" href="papers/concept-bottlenecks.pdf" target="_blank" rel="noopener">PDF</a>
+    </div>
+  </article>
+  <article class="pub">
+    <div><span class="badge b-rev">Under review · ComputEL-10</span></div>
+    <div>
+      <p class="t">Beyond Stance Detection: Can Cause–Solution Annotation for Bengali Climate News Transfer Zero-Shot to Hindi?</p>
+      <p class="a"><b>Farzana Zahid Manoshi</b>, <!-- add co-authors --></p>
+      <p class="abs">We extend a Bengali climate news corpus with a 16-category, Bangladesh-specific cause taxonomy paired with source-grounded solutions, and release the first Hindi dataset of its kind (2,000 articles). A Bangla-trained IndicBERTv2 classifier (F1-macro 0.730) falls to 0.396 under zero-shot transfer to Hindi, mostly because of precision and calibration failures.</p>
+      <a class="btn" href="papers/beyond-stance-detection.pdf" target="_blank" rel="noopener">PDF</a>
+    </div>
+  </article>
+
 </section>
 
 <!-- RESEARCH -->
@@ -168,88 +219,29 @@ footer{max-width:1000px;margin:40px auto 0;padding:24px 20px 40px;border-top:1px
   </div>
 </section>
 
-<!-- PUBLICATIONS -->
-<section id="publications">
-  <h2>Publications</h2>
-
-  <article class="pub">
-    <div><span class="badge b-pub">Published · NLP4I @ EMNLP 2026</span></div>
-    <div>
-      <p class="t">A Quantitative Gap Audit of LLM-era NLP for Education: Validity, Deployment, and Multilingual Equity</p>
-      <p class="a"><b>Farzana Zahid Manoshi</b>, <!-- add co-authors --></p>
-      <p class="abs">An audit of 137 educational NLP papers (2022–2025) using three metrics: Validity Gap, Deployment Readiness Index and Multilingual Equity Index. 92.7% of studies never evaluate learning outcomes.</p>
-      <a class="btn" href="https://openreview.net/forum?id=utV9AZY77P" target="_blank" rel="noopener">Paper</a>
-      <a class="btn" href="papers/education-nlp-gap-audit.pdf" target="_blank" rel="noopener">PDF</a>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div><span class="badge b-acc">Accepted · WiNNLP @ EMNLP 2026</span></div>
-    <div>
-      <p class="t">Marker Signal Void: Linguistic Deception Fingerprinting and Transformer Benchmarking on a Domain-Stratified Bangla Rumour Corpus</p>
-      <p class="a"><b>Farzana Zahid Manoshi</b>, <!-- add co-authors --></p>
-      <p class="abs">We introduce MisInfo-11K, a seven-domain Bangla rumour corpus, 14 linguistic markers that expose domain-specific deception strategies, and the Marker Signal Void, a ceiling on what surface cues can detect. MuRIL reaches Macro-F1 0.98.</p>
-      <a class="btn" href="papers/marker-signal-void.pdf" target="_blank" rel="noopener">PDF</a>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div><span class="badge b-rev">Under review · COLING 2027</span></div>
-    <div>
-      <p class="t">Human-Supervised Concept Bottlenecks for Interpretable Bangla Text Classification</p>
-      <p class="a"><b>Farzana Zahid Manoshi</b>, <!-- add co-authors --></p>
-      <p class="abs">We collect 436,966 dense human instance–concept judgments for Bangla sarcasm and show that human-supervised concept bottleneck models beat similarity-supervised ones on all nine encoders. GPT-5.x models reach about 79% label accuracy yet agree only modestly with humans on concepts.</p>
-      <a class="btn" href="papers/concept-bottlenecks.pdf" target="_blank" rel="noopener">PDF</a>
-    </div>
-  </article>
-  <article class="pub">
-    <div><span class="badge b-rev">Under review · ComputEL-10</span></div>
-    <div>
-      <p class="t">Beyond Stance Detection: Can Cause–Solution Annotation for Bengali Climate News Transfer Zero-Shot to Hindi?</p>
-      <p class="a"><b>Farzana Zahid Manoshi</b>, <!-- add co-authors --></p>
-      <p class="abs">We extend a Bengali climate news corpus with a 16-category, Bangladesh-specific cause taxonomy paired with source-grounded solutions, and release the first Hindi dataset of its kind (2,000 articles). A Bangla-trained IndicBERTv2 classifier (F1-macro 0.730) falls to 0.396 under zero-shot transfer to Hindi, mostly because of precision and calibration failures.</p>
-      <a class="btn" href="papers/beyond-stance-detection.pdf" target="_blank" rel="noopener">PDF</a>
-    </div>
-  </article>
-
-</section>
-
-<!-- CODE -->
-<section id="code">
-  <h2>Code</h2>
-  <div class="card">
-    <p style="margin:0" class="soon">Code and datasets will be released here as the papers appear. Repositories live on <a href="https://github.com/YOUR-USERNAME">GitHub</a>.</p>
-  </div>
-</section>
-
 <!-- WRITING -->
 <section id="writing">
   <h2>Writing</h2>
-  <p style="max-width:68ch">My essays and commentary appear in <span class="hl">The Daily Observer</span> and <span class="hl">The New Nation</span>. They range from <span class="hl">introspective reflections</span> on thought, gratitude and meaning to commentary on <span class="hl">AI and education</span> in Bangladesh.</p>
+  <p style="max-width:62ch">I write the way I think: slowly, and with an ear for what lies beneath the words. These pieces, published in <span class="hl">The Daily Observer</span> and <span class="hl">The New Nation</span>, drift between the quiet inner life, thought, gratitude, the beauty hiding in ordinary days, and the questions AI is raising for how Bangladesh learns.</p>
   <article class="wr">
     <p class="src"><span class="badge b-pub">The New Nation</span> <time>20 Jan 2026</time></p>
     <h3><a href="https://dailynewnation.com/news/798084" target="_blank" rel="noopener">The Learning Revolution: How AI Bridged Bangladesh’s Education Gap</a></h3>
-    <p>How ChatGPT-era tools reshaped learning in Bangladesh, weighing the gains in access against over-reliance, academic integrity and the rural–urban divide.</p>
   </article>
   <article class="wr">
     <p class="src"><span class="badge b-pub">The Daily Observer</span> <time>3 Jan 2026</time></p>
     <h3><a href="https://www.observerbd.com/news/560716" target="_blank" rel="noopener">How AI changing our education</a></h3>
-    <p>An examination of AI as a study companion, and what it costs in critical thinking, originality and equitable access.</p>
   </article>
   <article class="wr">
     <p class="src"><span class="badge b-pub">The Daily Observer</span> <time>18 Oct 2025</time></p>
     <h3><a href="https://observerbd.com/news/549397" target="_blank" rel="noopener">The essence of thought</a></h3>
-    <p>A letter on how thought shapes emotion, hope and action, and why the mind deserves deliberate care.</p>
   </article>
   <article class="wr">
     <p class="src"><span class="badge b-pub">The Daily Observer</span> <time>4 Oct 2024</time></p>
     <h3><a href="https://observerbd.com/news/493306" target="_blank" rel="noopener">Joviality in self exploration</a></h3>
-    <p>A meditation on finding beauty, gratitude and meaning in the ordinary rather than the dazzling.</p>
   </article>
   <article class="wr">
     <p class="src"><span class="badge b-pub">The New Nation</span> <time>30 Oct 2023</time></p>
     <h3><a href="https://dailynewnation.com/news/592937" target="_blank" rel="noopener">The pursuit of happiness</a></h3>
-    <p>On happiness as peace of mind and a way of living, found in silence, kindness and gratitude.</p>
   </article>
 </section>
 
@@ -258,10 +250,8 @@ footer{max-width:1000px;margin:40px auto 0;padding:24px 20px 40px;border-top:1px
   <h2>Contact</h2>
   <p style="max-width:62ch">I would love to hear from <span class="hl">prospective advisors</span>, collaborators and fellow researchers.</p>
   <div class="soc">
-    <a class="btn" href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a>
-    <a class="btn" href="https://github.com/YOUR-USERNAME">GitHub</a>
-    <a class="btn" href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a>
-    <a class="btn" href="https://scholar.google.com/">Google Scholar</a>
+    <a class="btn" href="mailto:farzanazahid@gmail.com">farzanazahid@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/farzana-zahid-b3b268227/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="btn" href="cv.pdf">CV</a>
   </div>
 </section>
